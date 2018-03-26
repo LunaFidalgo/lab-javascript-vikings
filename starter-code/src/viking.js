@@ -50,6 +50,8 @@ function Saxon(health, strength) {
 }
 
 Saxon.prototype = Object.create(Soldier.prototype);
+//asi guardamos como constructor del saxon el saxon y no el soldier (por herencia saldria eso)
+Saxon.prototype.constructor = Saxon;
 
 Saxon.prototype.receiveDamage = function(damage) {
   this.health = this.health - damage;
